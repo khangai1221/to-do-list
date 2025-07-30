@@ -51,7 +51,8 @@ h1 {
 }
 
 .add-btn:hover,
-.filter-buttons button:hover {
+.filter-buttons button:hover,
+.deleteMark:hover {
   background: #f3f4f6;
   color: black;
 }
@@ -62,18 +63,45 @@ h1 {
   margin-top: 20px;
 }
 
-.todo-list li {
-  text-align: left;
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 8px 12px;
   border-bottom: 1px solid #eee;
 }
+.todo-checkbox {
+  margin-right: 10px;
+  cursor: pointer;
+}
 
-.todo-list li.completed {
+.task-text {
+  flex: 1;
+  font-size: 14px;
+  margin: 0 10px;
+  word-break: break-word;
+}
+
+.todoItem.completed {
   text-decoration: line-through;
   color: gray;
+  opacity: 0.7;
 }
-.made-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+
+.empty {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.delete-btn {
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: red;
 }
