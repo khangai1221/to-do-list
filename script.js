@@ -68,7 +68,7 @@ const onClick = () => {
     taskSpan.className = "task-text";
 
     const deleteBtn = document.createElement("p");
-    deleteBtn.textContent = "🗑️";
+    deleteBtn.textContent = "Delete";
     deleteBtn.className = "delete-btn";
 
     deleteBtn.addEventListener("click", () => {
@@ -80,9 +80,10 @@ const onClick = () => {
     });
 
     checkbox.addEventListener("click", () => {
-      todoItem.classList.toggle("completed");
+      taskSpan.classList.toggle("completed-text");
       updateCounter();
     });
+
     todoItem.appendChild(checkbox);
     todoItem.appendChild(taskSpan);
     todoItem.appendChild(deleteBtn);
